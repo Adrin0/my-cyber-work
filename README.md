@@ -26,26 +26,26 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly accessible, in addition to restricting intruders to the network.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file and system logs.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| Web-1    |          |            |                  |
-| Web-2    |          |            |                  |
-| Web-3    |          |            |                  |
+| Jump Box | Gateway  |20.57.169.150| Linux           |
+| Web-1    | Server   |10.0.0.11   | Linux/ Docker    |
+| Web-2    | Server   |10.0.0.12   | Linux/ Docker    |
+| Web-3    | Server   |10.0.0.16   | Linux/ Docker    |
+| Elk-1    | Logging  |10.1.0.5    | Linux/ Docker    |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+-164.67.98.179 
+-97.90.44.246
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
@@ -54,8 +54,8 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
+| Jump Box | Yes            |164.67.98.179 97.90.44.246 |
+| Elk-1    | Yes                 | 97.90.44.246         |
 |          |                     |                      |
 
 ### Elk Configuration
